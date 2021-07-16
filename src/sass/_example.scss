@@ -1,27 +1,97 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #424242;
-  max-width: 960px;
-  padding: 16px;
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+.wrapper {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #009688;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+.wrapper button, .timer-wrp button {
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 700;
+	font-size: 25px;
+	padding: 10px 25px;
+	margin-left: 20px;
+	margin-top: 20px;
+	border-radius: 5px;
+	background-color: #7FFFD4;
 }
 
-.example .background {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  background-image: url('../images/demo.jpg');
-  background-size: cover;
-  background-position: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+	font-weight: bolder;
+	margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.timer-wrp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+	 padding: 5px;
+
+}
+
+.timer-wrp input {
+	font-size: 20px;
+	width: 200px;
+	height: 35px;
+	border-radius: 5px;
+}
+
+.container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+li {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+}
+
+
+@media all and (max-width: 768px) {
+  
+  li {
+    font-size: 1.125rem;
+    padding: .75rem;
+  }
+  
+  li span {
+    font-size: 3.375rem;
+  }
 }
